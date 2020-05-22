@@ -1,0 +1,309 @@
+/* 
+======================================================
+00. Global variables
+01. Body
+02. Wrapper
+03. Card
+04. Checkbox
+05. Click animation
+06. Buzz out animation
+====================================================== 
+*/
+
+
+
+/* 00. Global variables */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--dark-primary-color:#00363a;
+	--light-primary-color:#428e92;
+	--default-primary-color:#006064;
+	--light-text-color:#FFFFFF;
+	--dark-text-color:#212121;
+	--checkbox-bg: #d3d3d3;
+	--warning: #ff4343;
+}
+
+/* 00. Global variables */
+
+
+
+/* 01. Body */
+
+body {
+	background: #abbaab; 
+	background: -webkit-linear-gradient(to right, #abbaab, #ffffff, #abbaab);
+	background: linear-gradient(to right, #abbaab, #ffffff, #abbaab);
+	color: var(--light-text-color);
+}
+
+p {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.25rem;
+}
+
+h1, .card-button p {
+	font-family: 'Poppins', sans-serif;
+}
+
+/* 01. Body */
+
+
+
+/* 02. Wrapper */
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+/* 02. Wrapper */
+
+
+
+/* 03. Card */
+
+/* Card container */
+.card {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 2fr 3fr 1fr 1fr 1fr 1fr 1fr 1.5fr;
+	width: 60vh;
+	height: 90vh;
+	background: var(--default-primary-color);
+	box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Card text output */
+.card-output-text {
+	height: 100%;
+	background: var(--dark-primary-color);
+	border-top: 	1px solid var(--dark-text-color);
+	border-bottom: 	1px solid var(--dark-text-color);
+}
+
+.card-output-text p#password-output {
+	max-width: 480px;
+	padding: 1rem;
+	text-align: center;
+}
+
+/* Prevent overflow of words outside the container */
+.prevent-overflow {
+	word-wrap: break-word;
+}
+
+/* Card button container */
+.card-button {
+	width: 80%;
+	height: 70%;
+	cursor: pointer;
+	user-select: none;
+	transition: all 0.4s ease 0s;
+	background: var(--dark-primary-color);
+	color: var(--light-text-color);
+	border: 1px solid var(--light-text-color);
+}
+
+/* Elements positioning */
+.card-output-length,
+.card-include-uppercase,
+.card-include-lowercase,
+.card-include-numbers,
+.card-include-symbols {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+}
+
+.card-title,
+.card-output-text,
+.card-button-container,
+.card-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* 03. Card */
+
+
+
+/* 04. Checkbox */
+
+/* Checkbox Style */
+.checkbox {
+	display: inline-flex;	/* Make the container display inline */
+	position: relative;
+	cursor: pointer;
+}
+
+.checkbox > input {
+	/* Remove default styling on checkbox */
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	height: 2.5rem;
+	width: 2.5rem;
+	transition-duration: 0.3s;
+	cursor: pointer;
+	background: var(--checkbox-bg);
+	border: 1px solid var(--dark-primary-color);
+	border-radius: 0.2rem;
+}
+
+.active-checkbox {
+	border: 1px solid var(--light-primary-color)!important;
+	background: var(--dark-primary-color)!important;
+}
+
+.checkbox input#number-input {
+	height: 2.5rem;
+	width: 5rem;
+	padding-left: 1rem;
+	font-size: 1.5rem;
+	text-align: center;
+	color: var(--dark-text-color);
+}
+
+/* 04. Checkbox */
+
+
+
+/* 05. Click animation */
+
+@keyframes clickAnimation {
+	50% {
+		transition: all 0.4s ease 0s;
+		background: var(--light-primary-color);
+		color: var(--dark-text-color);
+		border: 1px solid var(--dark-text-color);
+	}
+}
+
+.clickAnimation {
+	animation: clickAnimation 0.5s;
+}
+
+/* 05. Click animation */
+
+
+
+/* 06. Buzz out animation */
+
+@-webkit-keyframes buzz-out {
+	10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+    }
+    20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+    }
+    30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+    }
+    40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+    }
+    50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+    }
+    60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+    }
+    70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+    }
+    80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+    }
+    90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+    }
+    100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+    }
+}
+
+@keyframes buzz-out {
+	10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+    }
+    20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+    }
+    30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+    }
+    40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+    }
+    50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+    }
+    60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+    }
+    70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+    }
+    80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+    }
+    90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+    }
+    100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+    }
+}
+
+.buzz-out {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	color: var(--warning);
+	-webkit-animation-name: buzz-out;
+	animation-name: buzz-out;
+	-webkit-animation-duration: 0.75s;
+	animation-duration: 0.75s;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+	-webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+}
+
+/* 06. Buzz out animation */
