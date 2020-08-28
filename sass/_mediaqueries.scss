@@ -1,0 +1,83 @@
+/* 
+	##Device = Tablets, Ipads, Phones (portrait)
+	##Screen = B/w 320px to 767px
+*/
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .card {
+    height: 100vh;
+		width: 100vh;
+		// background: cyan !important;
+  }
+}
+
+/* 
+	##Device = Tablets, Ipads, Phones (landscape)
+	##Screen = B/w 320px to 1024px
+*/
+
+@media (min-width: 320px) and (max-width: 1024px) and (orientation: landscape) {
+	body {
+		font-size: 1.15rem;
+	}
+
+  .card {
+    grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 2fr 1fr 1fr 1fr;
+		// background: yellow !important;
+
+    height: 100vh;
+		width: 100vw;
+
+		&-title {
+			grid-column: 1/3;
+			grid-row: 1/2;
+		}
+
+		&-output {
+			grid-column: 1/3;
+			grid-row: 2/3;
+
+			&-text {
+				p#password-output {
+					max-width: 480px;
+				}
+			}
+		}
+
+		&-include-lowercase {
+			grid-column: 1/2;
+			grid-row: 3/4;
+		}
+
+		&-include-uppercase {
+			grid-column: 2/3;
+			grid-row: 3/4;
+		}
+
+		&-include-numbers {
+			grid-column: 1/2;
+			grid-row: 4/5;
+		}
+
+		&-include-symbols {
+			grid-column: 2/3;
+			grid-row: 4/5;
+		}
+
+		&-output-length {
+			grid-column: 1/2;
+			grid-row: 5/6;
+		}
+
+		&-button-container {
+			grid-column: 2/3;
+			grid-row: 5/6;
+
+			.card-button {
+				width: 90%;
+				height: 50%;
+			}
+		}
+  }
+}

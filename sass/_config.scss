@@ -1,0 +1,40 @@
+//
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Colors
+$primary-color: #006064;
+$light-primary-color: #428e92;
+$dark-primary-color: #00363a;
+$light-color: #ffffff;
+$gray-color: #d3d3d3;
+$dark-color: #212121;
+$warning: #ff4343;
+
+// Fonts
+$primary-font: "Montserrat", sans-serif;
+$title-font: "Poppins", sans-serif;
+
+// Positions
+.card-password-length,
+.card-include-uppercase,
+.card-include-lowercase,
+.card-include-numbers,
+.card-include-symbols {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.card-title,
+.card-output-text,
+.card-button-container,
+.card-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,142 @@
+/* 
+======================================================
+01. Body
+02. Wrapper
+03. Card
+04. Checkbox
+====================================================== 
+*/
+
+@import "config";
+
+/* 01. Body */
+
+body {
+  background: #abbaab;
+  background: -webkit-linear-gradient(to right, #abbaab, #ffffff, #abbaab);
+  background: linear-gradient(to right, #abbaab, #ffffff, #abbaab);
+
+  color: $light-color;
+  font-family: $primary-font;
+  font-size: 1.25rem;
+}
+
+h1,
+.card-button p {
+  font-family: $title-font;
+}
+
+input {
+  /* Remove default styling on checkbox */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+
+  height: 2.5rem;
+  width: 2.5rem;
+  transition-duration: 0.3s;
+  cursor: pointer;
+  background: $gray-color;
+  border: 1px solid $dark-color;
+}
+
+/* 01. Body */
+
+/* 02. Wrapper */
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* 02. Wrapper */
+
+/* 03. Card */
+
+/* Card container */
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 3fr 1fr 1fr 1fr 1fr 1fr 1.5fr;
+  width: 60vh;
+  height: 90vh;
+  background: $primary-color;
+  border: 1px solid $gray-color;
+  box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.35);
+
+  //Card output section
+  &-output {
+    /* Password output container */
+    &-text {
+      height: 100%;
+      background: $dark-primary-color;
+      border-top: 1px solid $gray-color;
+      border-bottom: 1px solid $gray-color;
+      /* Password output text */
+      #password-output {
+        max-width: 480px; //Fix this
+        padding: 1rem;
+        text-align: center;
+      }
+    }
+
+    /* Prevent overflow of words outside the container */
+    .prevent-overflow {
+      word-wrap: break-word;
+    }
+  }
+
+  //Card password length section
+  &-password-length {
+    label {
+      input#number-input {
+        height: 2.5rem;
+        width: 5rem;
+        padding-left: 1rem;
+        font-size: 1.5rem;
+        text-align: center;
+        color: $dark-color;
+      }
+    }
+  }
+
+  //Button section
+  &-button-container {
+    .card-button {
+      width: 80%;
+      height: 70%;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.4s ease 0s;
+      border: 1px solid $gray-color;
+      background: $dark-primary-color;
+    }
+
+    .card-button:active {
+      background: $light-primary-color;
+    }
+  }
+}
+
+/* 03. Card */
+
+/* 04. Checkbox */
+
+.checkbox {
+  display: inline-flex; /* Make the container display inline */
+  position: relative;
+  cursor: pointer;
+}
+
+.active-checkbox {
+  border: 1px solid $light-color !important;
+  background: $dark-primary-color !important;
+}
+
+/* 04. Checkbox */
+
+@import "animations";
+@import "mediaqueries";
