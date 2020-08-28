@@ -41,6 +41,11 @@ input {
   border: 1px solid $dark-color;
 }
 
+/* Prevent overflow of words outside the container */
+.prevent-overflow {
+	word-wrap: anywhere;
+}
+
 /* 01. Body */
 
 /* 02. Wrapper */
@@ -69,24 +74,16 @@ input {
 
   //Card output section
   &-output {
-    /* Password output container */
-    &-text {
-      height: 100%;
-      background: $dark-primary-color;
-      border-top: 1px solid $gray-color;
-      border-bottom: 1px solid $gray-color;
-      /* Password output text */
-      #password-output {
-        max-width: 480px; //Fix this
-        padding: 1rem;
-        text-align: center;
-      }
-    }
+		height: 100%;
+		background: $dark-primary-color;
+		border-top: 1px solid $gray-color;
+		border-bottom: 1px solid $gray-color;
 
-    /* Prevent overflow of words outside the container */
-    .prevent-overflow {
-      word-wrap: break-word;
-    }
+		/* Password output text */
+		#password-output {
+			padding: 1rem;
+			text-align: center;
+		}
   }
 
   //Card password length section
