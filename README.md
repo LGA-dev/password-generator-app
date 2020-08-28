@@ -1,7 +1,5 @@
 # PW Generator
 
-> Password generator app made in JS.
-
 ## Table of contents
 
 - [General info](#general-info)
@@ -12,11 +10,11 @@
 
 ## General info
 
-This project was made to practice JS.
+I had a lot of fun making this project.
 
-I had a lot of fun making this project because every time that I thought I had finished something else broke.
+Some of the things I have learned with this project are how to use **addEventListener** to target certain events and add/remove classes with **classList**. With this, I was able to add or delete data within an array based on active checkboxes.
 
-Some of the things that I have learned with this project are how to use **addEventListener** to target certain events and add/remove classes with **classList**.
+Also I updated this project with SASS, so the CSS is a bit less bloated now.
 
 ## Screenshot
 
@@ -25,7 +23,7 @@ Some of the things that I have learned with this project are how to use **addEve
 ## Technologies
 
 - HTML
-- CSS
+- SASS
 - JS
 
 ## Setup
