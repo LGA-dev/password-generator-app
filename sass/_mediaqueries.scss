@@ -7,9 +7,6 @@
   .card {
     height: 100vh;
 		width: 100vw;
-		&-output {
-			background: blue !important;
-		}
 	}
 }
 
@@ -26,7 +23,6 @@
   .card {
     grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 2fr 1fr 1fr 1fr;
-		// background: yellow !important;
 
     height: 100vh;
 		width: 100vw;
