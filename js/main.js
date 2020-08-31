@@ -239,4 +239,11 @@ function changeColorOnClick() {
   }
 }
 
+// Function that copies current password output to clipboard
+
+function copyText() {
+  let text = passwordOutput.innerText;
+  navigator.clipboard.writeText(text);
+}
+
 // *  04. Functions  *
