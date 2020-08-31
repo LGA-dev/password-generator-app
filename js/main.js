@@ -158,8 +158,8 @@ generatePasswordButton.addEventListener('click', function name() {
   if (passwordLength.value == "") {
     passwordOutput.innerHTML = 'Enter a value in the password length input';
     textBuzzAnimation();
-  } else if (passwordLength.value == 0 || passwordLength.value > 90) {
-    passwordOutput.innerHTML = 'Enter a number higher than 0 and lower than 90';
+  } else if (passwordLength.value == 0 || passwordLength.value > 50) {
+    passwordOutput.innerHTML = 'Enter a number higher than 0 and lower than 50';
     textBuzzAnimation();
   }
   console.log(passwordLength.value);
@@ -178,9 +178,9 @@ generatePasswordButton.addEventListener('click', function name() {
 
 function buildActiveArray() {
   // Check every item inside allCheckboxes variable
-  for (var i = 0; i < allCheckboxes.length; i++) {
+  for (let i = 0; i < allCheckboxes.length; i++) {
     // Store the current item inside a variable
-    var individualCheckbox = allCheckboxes[i];
+    let individualCheckbox = allCheckboxes[i];
 
     // If the item contains the lowercase-active-checkbox class
     if (individualCheckbox.classList.contains('lowercase-active-checkbox')) {
