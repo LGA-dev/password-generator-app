@@ -87,7 +87,7 @@ input {
 		/* Password output text */
 		#password-output {
 			padding: 1rem;
-			text-align: center;
+      text-align: center;
     }
     
     .copy-button {
@@ -109,8 +109,8 @@ input {
 
   //Card password length section
   &-password-length {
-    label {
-      input#number-input {
+    label.checkbox {
+      input#password-length-input {
         height: 2.5rem;
         width: 5rem;
         padding-left: 1rem;
